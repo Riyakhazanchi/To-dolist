@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+body,input,button{
+    font-family: 'Roboto', sans-serif;
+}
+body
+{
+background:#edf0f1;
+padding: 80px 0 0 0;
+}
+header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    padding: 15px;
+    top:0;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 10px;
+    left: 0;
+    background: #25b99a;
+    box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+header input {
+    width: 95%;
+    height: 50px;
+    float: left;
+    text-indent: 20px;
+    color:#fff;
+    background: rgba(255,255,255,0.2);
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 5px;
+    margin-top:20px;
+    border:0px;
+    border-radius: 5px;
+    border:0px;
+    box-shadow: none;
+    outline: none;
+    z-index: 5px;
+    
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    -ms-appearance:none;
+    -o-appearance: none;
+    appearance: none;
+    appearance: none;
+}
+
+header input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.75);
+}
+
+header input::-moz-input-placeholder {
+    color: rgba(255,255,255,0.75);
+}
+header input::-ms-input-placeholder {
+    color: rgba(255,255,255,0.75);
+}
+header input::-o-input-placeholder {
+    color: rgba(255,255,255,0.75);
+}
+
+header button{
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    top:30px;
+    right: 65px;
+    border: none;
+    z-index=2;
+    border-radius:25px;
+    background:#fff;
+    cursor: pointer;
+    outline:none;
+}
+header button svg{
+    width:16px;
+    fill:#25b99a ;
+    height: 16px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin:-8px 0 0 -8px;
+}
+
+.container{
+    width:100%;
+    float: left;
+    padding: 15px;
+}
+
+ul.todo
+{
+    padding:0px;
+    width:100%;
+    float: left;
+    display: inline;
+    list-style: none;
+}
+
+ul.todo li{
+    width:100%;
+    height: 50px;
+    float: left;
+    line-height: 22px;
+
+    margin: 0 0 20px 0;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(44,62,80,0.10);
+    font-size: 18px;
+    font-weight: 400;
+    min-height: 50px;
+    color:#444;
+  text-indent: 10px;
+}
+
+ul.todo li:last-of-type{
+    margin: 0;
+}
+
+
+ul.todo .remove1 svg{
+    height:25px;
+    width: 25px;
+    fill:#c0cecb;
+    background: none;
+    
+}
+ul.todo .remove1 svg:hover
+{
+    fill:#c85656;
+}
+
+ul.todo .accept1 svg
+{
+    height:25px;
+    width: 25px;
+   fill: #25b99a;
+   
+}
+
+ul.todo .accept1 svg:hover{
+    fill: #fff;
+   background: #25b99a;
+   border-radius:60%;
+   
+}
+
+
+ul.todo#complete
+{
+    padding:0px;
+    width:100%;
+    float: left;
+    display: inline;
+    list-style: none;
+}
+
+ul.todo#complete li{
+    width:100%;
+    height: 50px;
+    float: left;
+    line-height: 22px;
+
+    margin: 0 0 20px 0;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(44,62,80,0.10);
+    font-size: 18px;
+    font-weight: 400;
+    min-height: 50px;
+    color:#444;
+  text-indent: 10px;
+}
+ul.todo#complete .accept1 svg:hover{
+    fill: #fff;
+   background: #25b99a;
+   border-radius:60%;
+   
+}
+
+ul.todo#complete .remove1 svg{
+    height:25px;
+    width: 25px;
+    fill:#c0cecb;
+    background: none;
+    
+}
+ul.todo#complete .remove1 svg:hover
+{
+    fill:#c85656;
+}
+
+ul.todo#complete .accept1 svg
+{
+    
+   height:25px;
+   width: 25px;
+    fill: #fff;
+    background: #25b99a;
+    border-radius:60%;
+ 
+    
+}
+
+ul.todo#complete .accept1 svg:hover{
+   
+  fill: #25b99a;
+  background: none;
+  
+   
+}
+
+ul.todo#complete
+{
+    position: relative;
+    padding: 60px 0 0 0 ;
+}
+ul.todo#complete:before{
+    content:'';
+    width:150px;
+    height: 3px;
+    background: #d8e5e0;
+    position: absolute;
+    top:10px;
+    left:50%;
+    margin:0 0 0 -75px;
+}
+ul.todo#todo:empty:after{
+    content: 'You have nothing to-do!';
+    margin: 45px 0 0 0;
+}
+
+ul.todo#complete:empty:after{
+    content:'You have yet to complete any tasks.';
+}
+ul.todo#todo:after,
+ul.todo#complete:after{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color:#aaa;
+}
